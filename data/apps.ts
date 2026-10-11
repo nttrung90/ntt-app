@@ -5,7 +5,7 @@ export const siteConfig = {
     "Tuyển tập các ứng dụng Android của NTT trên Google Play: Lịch Việt, T-Scanner, T-Emulator.",
   // Đổi thành domain thật sau khi deploy (dùng cho sitemap + robots)
   url: "https://ntt-app.vercel.app",
-  email: "support@ntt-app.vn",
+  email: "firstntt90@gmail.com",
 };
 
 export interface AppInfo {
