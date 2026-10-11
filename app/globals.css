@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #ffffff;
+  --ink: #171717;
+  --muted: #666666;
+  --line: #e8e8e8;
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #4f46e5;
+  color: #fff;
+}
+
+/* Nội dung chính sách quyền riêng tư (render từ Markdown) */
+.privacy-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #262626;
+}
+.privacy-body h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+.privacy-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+}
+.privacy-body p {
+  margin: 0.75rem 0;
+}
+.privacy-body ul,
+.privacy-body ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+.privacy-body ul {
+  list-style: disc;
+}
+.privacy-body ol {
+  list-style: decimal;
+}
+.privacy-body li {
+  margin: 0.4rem 0;
+}
+.privacy-body hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid var(--line);
+}
+.privacy-body a {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+.privacy-body strong {
+  font-weight: 700;
+}
