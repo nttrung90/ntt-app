@@ -21,6 +21,8 @@ export interface AppInfo {
   gradient: string;
   /** Tên file icon trong /public/icons/<slug>.png — để trống thì dùng chữ cái đầu */
   iconFile?: string;
+  /** URL icon (ưu tiên hơn iconFile) — dùng ảnh từ CDN Google Play */
+  iconUrl?: string;
   /** true = đã có nội dung privacy policy trong content/privacy/<slug>.md */
   hasPrivacyPolicy: boolean;
 }
@@ -28,7 +30,7 @@ export interface AppInfo {
 export const apps: AppInfo[] = [
   {
     slug: "lich-viet",
-    iconFile: "lich-viet.webp",
+    iconUrl: "https://play-lh.googleusercontent.com/VzXpFGaAnU5vHVeS5l-SRBWA375yy8yjYLGw4rVC6NNgYjO1sfi26wErcl_tlr3lb-cA6fPFJN8cv7rmfVzRqA=s512-rw",
     name: "Lịch Việt (Vạn Niên)",
     packageName: "com.lichviet.vannienntt",
     tagline: "Xem lịch âm dương không lo quảng cáo làm phiền bạn",
@@ -48,7 +50,7 @@ export const apps: AppInfo[] = [
   },
   {
     slug: "t-scanner",
-    iconFile: "t-scanner.webp",
+    iconUrl: "https://play-lh.googleusercontent.com/8UGuwJ5zUTzAlBAml4sijii71YHXRozHGhEmvMuzHique0l3ZPjkUi_Izh6Y2GDBtrDCnz84K0WOvDz6QWCP=s512-rw",
     name: "T-Scanner",
     packageName: "com.tscanner.app",
     tagline: "Quét tài liệu, OCR tiếng Việt ngay trên điện thoại",
@@ -67,7 +69,7 @@ export const apps: AppInfo[] = [
   },
   {
     slug: "t-emulator",
-    iconFile: "t-emulator.webp",
+    iconUrl: "https://play-lh.googleusercontent.com/w4NVUy6RBtE3jyO56Xi-47_XgNi7-fO-DioSED2hhaUY7ZLU1HjAh2bPCY1XfsUmzvpZvLa_EEjaGU9h0kY4djI=s512-rw",
     name: "T-Emulator",
     packageName: "com.temulator.app",
     tagline: "Giả lập đa hệ máy cho game cổ điển — tiếng Việt, chơi offline",

@@ -5,13 +5,14 @@ import type { AppInfo } from "@/data/apps";
 export function AppIcon({ app, size = "md" }: { app: AppInfo; size?: "sm" | "md" | "lg" }) {
   const dims =
     size === "lg" ? "h-24 w-24 rounded-3xl" : size === "sm" ? "h-12 w-12 rounded-2xl" : "h-16 w-16 rounded-2xl";
-  if (app.iconFile) {
+  if (app.iconUrl) {
     return (
       <img
-        src={`/icons/${app.iconFile}`}
+        src={app.iconUrl}
         alt={`Icon ${app.name}`}
         width={size === "lg" ? 96 : size === "sm" ? 48 : 64}
         height={size === "lg" ? 96 : size === "sm" ? 48 : 64}
+        loading="lazy"
         className={`shrink-0 object-cover shadow-lg ${dims}`}
       />
     );
