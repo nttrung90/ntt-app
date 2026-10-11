@@ -17,14 +17,14 @@ Bằng việc cài đặt và sử dụng T-Scanner, bạn đồng ý với các
 ### 2. Nguyên tắc xử lý dữ liệu: 100% Tại thiết bị (On-Device Processing)
 T-Scanner được thiết kế theo nguyên tắc **ưu tiên quyền riêng tư tối đa (Privacy-First)**:
 - **Xử lý ngoại tuyến (Offline):** Toàn bộ quá trình quét tài liệu, trích xuất văn bản (OCR Tiếng Việt / Tiếng Anh bằng Tesseract và ML Kit), chuyển đổi PDF và ghép ảnh dài đều được thực hiện trực tiếp trên thiết bị của bạn.
-- **Không tải tài liệu lên máy chủ:** Chúng tôi **KHÔNG** lưu trữ, sao chép hoặc tải các hình ảnh, nội dung văn bản quét hay tập tin PDF của bạn lên bất kỳ máy chủ từ xa nào khi bạn sử dụng các tính năng cơ bản. Tài liệu của bạn thuộc quyền sở hữu riêng của bạn và chỉ nằm trên máy của bạn.
+- **Không tải tài liệu lên máy chủ:** Chúng tôi **KHÔNG** lưu trữ, sao chép hoặc tải các hình ảnh, nội dung văn bản quét hay tập tin PDF của bạn lên bất kỳ máy chủ từ xa nào khi bạn sử dụng các tính năng cơ bản. Tài liệu của bạn thuộc quyền sở hữu riêng của bạn và chỉ nằm trên bộ nhớ máy của bạn.
 
 ---
 
 ### 3. Các quyền ứng dụng yêu cầu và mục đích sử dụng
 Để cung cấp các tính năng cốt lõi, T-Scanner yêu cầu một số quyền truy cập trên thiết bị Android:
 
-1. **Quyền Máy ảnh (ndroid.permission.CAMERA)**:
+1. **Quyền Máy ảnh (android.permission.CAMERA)**:
    - **Mục đích:** Cho phép bạn chụp ảnh tài liệu, hóa đơn, giấy tờ để quét và chuyển đổi thành PDF hoặc trích xuất văn bản OCR.
    - **Cam kết:** Ứng dụng chỉ kích hoạt máy ảnh khi bạn bấm nút Quét/Chụp ảnh. Chúng tôi không chụp ảnh ngầm, không quay video và không sử dụng máy ảnh cho bất kỳ mục đích nào khác.
 
@@ -63,5 +63,5 @@ Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo th�
 
 ### 8. Thông tin liên hệ
 Nếu bạn có bất kỳ câu hỏi, thắc mắc hoặc đề xuất nào liên quan đến Chính sách quyền riêng tư này, vui lòng liên hệ với chúng tôi:
-- **Email:** support@tscanner.app
+- **Email:** firstntt90@gmail.com
 - **Ứng dụng:** T-Scanner (Mục Mở rộng -> Giới thiệu)

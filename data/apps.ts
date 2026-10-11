@@ -28,6 +28,7 @@ export interface AppInfo {
 export const apps: AppInfo[] = [
   {
     slug: "lich-viet",
+    iconFile: "lich-viet.webp",
     name: "Lịch Việt (Vạn Niên)",
     packageName: "com.lichviet.vannienntt",
     tagline: "Xem lịch âm dương không lo quảng cáo làm phiền bạn",
@@ -43,10 +44,11 @@ export const apps: AppInfo[] = [
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.lichviet.vannienntt",
     gradient: "from-amber-500 to-red-600",
-    hasPrivacyPolicy: false,
+    hasPrivacyPolicy: true,
   },
   {
     slug: "t-scanner",
+    iconFile: "t-scanner.webp",
     name: "T-Scanner",
     packageName: "com.tscanner.app",
     tagline: "Quét tài liệu, OCR tiếng Việt ngay trên điện thoại",
@@ -65,17 +67,28 @@ export const apps: AppInfo[] = [
   },
   {
     slug: "t-emulator",
+    iconFile: "t-emulator.webp",
     name: "T-Emulator",
-    packageName: "",
-    tagline: "Giả lập game trên Android — sắp ra mắt",
+    packageName: "com.temulator.app",
+    tagline: "Giả lập đa hệ máy cho game cổ điển — tiếng Việt, chơi offline",
     description:
-      "T-Emulator là ứng dụng giả lập game trên Android đang được phát triển. Thông tin chi tiết và link tải sẽ được cập nhật khi ứng dụng chính thức phát hành.",
+      "T-Emulator là trình giả lập đa nền tảng cho game cổ điển trên Android: chọn ROM từ máy và chơi ngay với phím điều khiển cảm ứng tối ưu từng hệ máy, lưu game 10 slot, tua nhanh, cheat Game Genie/Action Replay — hoàn toàn offline, không cần tài khoản.",
     features: [
-      "Đang phát triển — thông tin sẽ cập nhật sớm",
+      "Hỗ trợ nhiều hệ máy game cổ điển",
+      "Chọn và chạy ROM trực tiếp từ thiết bị",
+      "Phím cảm ứng với layout riêng cho từng hệ máy",
+      "Lưu/tải game 10 slot + Quick Save/Quick Load",
+      "Chế độ Rewind và Turbo Boost",
+      "Tùy chỉnh hiển thị: FPS, bộ lọc ảnh, scanline, xoay màn hình",
+      "Hỗ trợ cheat Game Genie và Action Replay",
+      "Chụp ảnh màn hình khi chơi",
+      "Giao diện tiếng Việt và tiếng Anh",
+      "Chạy hoàn toàn offline, không cần tài khoản",
     ],
-    playStoreUrl: "",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.temulator.app",
     gradient: "from-violet-500 to-purple-800",
-    hasPrivacyPolicy: false,
+    hasPrivacyPolicy: true,
   },
 ];
 

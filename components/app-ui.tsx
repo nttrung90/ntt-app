@@ -4,11 +4,22 @@ import type { AppInfo } from "@/data/apps";
 
 export function AppIcon({ app, size = "md" }: { app: AppInfo; size?: "sm" | "md" | "lg" }) {
   const dims =
-    size === "lg" ? "h-24 w-24 text-4xl rounded-3xl" : size === "sm" ? "h-12 w-12 text-xl rounded-2xl" : "h-16 w-16 text-2xl rounded-2xl";
+    size === "lg" ? "h-24 w-24 rounded-3xl" : size === "sm" ? "h-12 w-12 rounded-2xl" : "h-16 w-16 rounded-2xl";
+  if (app.iconFile) {
+    return (
+      <img
+        src={`/icons/${app.iconFile}`}
+        alt={`Icon ${app.name}`}
+        width={size === "lg" ? 96 : size === "sm" ? 48 : 64}
+        height={size === "lg" ? 96 : size === "sm" ? 48 : 64}
+        className={`shrink-0 object-cover shadow-lg ${dims}`}
+      />
+    );
+  }
   const initial = app.name.charAt(0).toUpperCase();
   return (
     <span
-      className={`grid shrink-0 place-items-center bg-gradient-to-br font-black text-white shadow-lg ${app.gradient} ${dims}`}
+      className={`grid shrink-0 place-items-center bg-gradient-to-br font-black text-white shadow-lg ${app.gradient} ${dims} ${size === "lg" ? "text-4xl" : size === "sm" ? "text-xl" : "text-2xl"}`}
       aria-hidden
     >
       {initial}
