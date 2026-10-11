@@ -6,9 +6,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-black/10 bg-white/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-indigo-600 to-violet-700 text-lg font-black text-white">
-            N
-          </span>
+          <img
+            src="/icon.svg"
+            alt="NTT Apps"
+            width={36}
+            height={36}
+            className="h-9 w-9"
+          />
           <span className="text-lg font-extrabold tracking-tight">
             {siteConfig.name}
           </span>
