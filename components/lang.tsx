@@ -45,7 +45,13 @@ export function LangRedirect() {
         const timer = setTimeout(() => ctrl.abort(), 2500);
         const res = await fetch("https://ipapi.co/country/", { signal: ctrl.signal });
         clearTimeout(timer);
-        const cc = (await res.text()).trim().toUpperCase();
+        // Chỉ chấp nhận mã quốc gia hợp lệ (2 chữ cái) với HTTP 200;
+        // 429/500 hay body lỗi -> bỏ qua, giữ mặc định tiếng Việt.
+        let cc = "";
+        if (res.ok) {
+          const text = (await res.text()).trim().toUpperCase();
+          if (/^[A-Z]{2}$/.test(text)) cc = text;
+        }
         const nav = (navigator.language || "").toLowerCase();
         const abroad = cc !== "" && cc !== "VN";
         const nonVietnamese = nav !== "" && !nav.startsWith("vi");

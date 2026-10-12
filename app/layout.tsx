@@ -23,7 +23,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  // lang mặc định "vi"; script scripts/fix-html-lang.mjs sẽ sửa thành "en"
+  // cho các file trong out/en/ sau khi build (static export).
   return (
     <html lang="vi">
       <body>{children}</body>
