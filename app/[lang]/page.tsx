@@ -41,14 +41,14 @@ export default async function HomePage({
           <div className="absolute -left-24 top-40 h-64 w-64 rounded-full bg-violet-200/50 blur-3xl" />
           <div className="absolute -right-24 top-48 h-64 w-64 rounded-full bg-amber-200/50 blur-3xl" />
         </div>
-        <div className="relative mx-auto max-w-5xl px-4 pb-16 pt-16 text-center sm:pb-24 sm:pt-24">
+        <div className="relative mx-auto max-w-5xl px-4 pb-10 pt-10 text-center sm:pb-14 sm:pt-14">
           <p className="inline-flex items-center gap-1.5 rounded-full border border-indigo-200/80 bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-indigo-700 shadow-sm backdrop-blur">
             <Smartphone size={13} /> {t.hero.badge}
           </p>
-          <h1 className="mx-auto mt-6 max-w-3xl text-4xl font-black leading-[1.15] tracking-tight text-neutral-900 sm:text-6xl">
+          <h1 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-[1.15] tracking-tight text-neutral-900 sm:text-6xl">
             {siteTagline(lang)}
           </h1>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-white/80 px-4 py-2 font-medium text-neutral-600 shadow-sm ring-1 ring-black/5 backdrop-blur">
               <Zap size={15} className="text-amber-500" /> {t.hero.points[0]}
             </span>
@@ -58,7 +58,7 @@ export default async function HomePage({
           </div>
           <a
             href="#apps"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-neutral-700 hover:shadow-xl"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-7 py-3.5 text-sm font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-neutral-700 hover:shadow-xl"
           >
             {t.nav.apps} <ArrowRight size={16} />
           </a>
@@ -66,7 +66,7 @@ export default async function HomePage({
       </section>
 
       {/* App list */}
-      <section id="apps" className="mx-auto max-w-5xl scroll-mt-20 px-4 py-14 sm:py-16">
+      <section id="apps" className="mx-auto max-w-5xl scroll-mt-20 px-4 py-10 sm:py-12">
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">{t.home.appsTitle}</h2>
@@ -82,7 +82,7 @@ export default async function HomePage({
 
       {/* Privacy index */}
       <section id="privacy" className="scroll-mt-20 border-t border-black/10 bg-neutral-50/80">
-        <div className="mx-auto max-w-5xl px-4 py-14 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 py-10 sm:py-12">
           <h2 className="text-2xl font-extrabold tracking-tight sm:text-3xl">{t.home.privacyTitle}</h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-500 sm:text-base">
             {t.home.privacySub}

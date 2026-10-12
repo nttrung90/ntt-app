@@ -70,9 +70,7 @@ export function AppCard({ app }: { app: LocalizedApp }) {
       <div className={`h-1 bg-gradient-to-r ${app.gradient}`} aria-hidden />
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start gap-4">
-          <span className="rounded-2xl ring-4 ring-neutral-100">
-            <AppIcon app={app} />
-          </span>
+          <AppIcon app={app} />
           <div className="min-w-0 pt-1">
             <h3 className="text-xl font-extrabold tracking-tight">{app.name}</h3>
             <p className="mt-1 text-sm font-medium leading-snug text-indigo-600">{app.lTagline}</p>
