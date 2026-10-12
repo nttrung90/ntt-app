@@ -10,8 +10,8 @@ export const siteConfig = {
   name: "NTT Apps",
   tagline: "Ứng dụng hữu ích cho mọi người",
   taglineEn: "Useful apps for everyone",
-  // Đổi thành domain thật sau khi deploy (dùng cho sitemap + robots)
-  url: "https://ntt-app.vercel.app",
+  // Domain thật sau khi deploy (dùng cho sitemap + robots)
+  url: "https://nttapp.vercel.app",
   email: "firstntt90@gmail.com",
 };
 
