@@ -2,7 +2,7 @@
 
 **Ngày hiệu lực:** 20 tháng 09 năm 2026
 **Ứng dụng:** T-Emulator (`com.temulator.app`)
-**Nhà phát triển:** [Thay bằng tên nhà phát triển/đơn vị hiển thị trên Google Play]
+**Nhà phát triển:** firstntt90
 **Liên hệ về quyền riêng tư:** Firstntt90@gmail.com
 
 T-Emulator tôn trọng quyền riêng tư của bạn. Chính sách này giải thích cách ứng dụng xử lý dữ liệu khi bạn sử dụng T-Emulator.

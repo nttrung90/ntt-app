@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Clock, ShieldCheck } from "lucide-react";
-import type { AppInfo } from "@/data/apps";
+import type { AppInfo, Lang, LocalizedApp } from "@/data/apps";
+import { strings } from "@/data/i18n";
 
 export function AppIcon({ app, size = "md" }: { app: AppInfo; size?: "sm" | "md" | "lg" }) {
   const dims =
@@ -28,7 +29,8 @@ export function AppIcon({ app, size = "md" }: { app: AppInfo; size?: "sm" | "md"
   );
 }
 
-export function PlayButton({ app, compact = false }: { app: AppInfo; compact?: boolean }) {
+export function PlayButton({ app, compact = false, lang = "vi" }: { app: AppInfo; compact?: boolean; lang?: Lang }) {
+  const t = strings(lang);
   if (!app.playStoreUrl) {
     return (
       <span
@@ -37,7 +39,7 @@ export function PlayButton({ app, compact = false }: { app: AppInfo; compact?: b
         }`}
       >
         <Clock size={compact ? 14 : 16} />
-        Sắp ra mắt
+        {t.play.soon}
       </span>
     );
   }
@@ -56,37 +58,38 @@ export function PlayButton({ app, compact = false }: { app: AppInfo; compact?: b
         <path d="M16.7 8.3 13 12 3.6 2.3c.4-.4 1-.4 1.7 0l11.4 6z" opacity=".75" />
         <path d="M16.7 15.7l-11.4 6c-.7.4-1.3.4-1.7 0l9.4-9.4 3.7 3.4z" opacity=".75" />
       </svg>
-      Tải trên Google Play
+      {t.play.download}
     </a>
   );
 }
 
-export function AppCard({ app }: { app: AppInfo }) {
+export function AppCard({ app }: { app: LocalizedApp }) {
+  const t = strings(app.lang);
   return (
     <article className="flex flex-col rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
       <div className="flex items-start gap-4">
         <AppIcon app={app} />
         <div className="min-w-0">
           <h3 className="text-xl font-extrabold tracking-tight">{app.name}</h3>
-          <p className="mt-0.5 text-sm font-medium text-indigo-600">{app.tagline}</p>
+          <p className="mt-0.5 text-sm font-medium text-indigo-600">{app.lTagline}</p>
         </div>
       </div>
       <p className="mt-4 flex-1 text-sm leading-relaxed text-neutral-600">
-        {app.description}
+        {app.lDescription}
       </p>
       <div className="mt-5 flex flex-wrap items-center gap-3">
-        <PlayButton app={app} compact />
+        <PlayButton app={app} compact lang={app.lang} />
         <Link
-          href={`/apps/${app.slug}`}
+          href={`/${app.lang}/apps/${app.slug}`}
           className="inline-flex items-center gap-1 text-sm font-bold text-neutral-700 hover:text-indigo-600"
         >
-          Chi tiết <ArrowRight size={15} />
+          {t.card.details} <ArrowRight size={15} />
         </Link>
         <Link
-          href={`/privacy/${app.slug}`}
+          href={`/${app.lang}/privacy/${app.slug}`}
           className="inline-flex items-center gap-1 text-sm font-medium text-neutral-400 hover:text-neutral-600"
         >
-          <ShieldCheck size={15} /> Quyền riêng tư
+          <ShieldCheck size={15} /> {t.card.privacy}
         </Link>
       </div>
     </article>
