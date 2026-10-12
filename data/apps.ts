@@ -123,14 +123,14 @@ export const apps: AppInfo[] = [
     iconUrl: "https://play-lh.googleusercontent.com/w4NVUy6RBtE3jyO56Xi-47_XgNi7-fO-DioSED2hhaUY7ZLU1HjAh2bPCY1XfsUmzvpZvLa_EEjaGU9h0kY4djI=s512-rw",
     name: "T-Emulator",
     packageName: "com.temulator.app",
-    tagline: "Giả lập đa hệ máy cho game cổ điển — tiếng Việt, chơi offline",
-    taglineEn: "Multi-system emulator for classic games — offline play",
+    tagline: "Giả lập NES, SNES, GBA và các hệ máy game cổ điển — tiếng Việt, chơi offline",
+    taglineEn: "NES, SNES, GBA emulator for classic games — offline play",
     description:
-      "T-Emulator là trình giả lập đa nền tảng cho game cổ điển trên Android: chọn ROM từ máy và chơi ngay với phím điều khiển cảm ứng tối ưu từng hệ máy, lưu game 10 slot, tua nhanh, cheat Game Genie/Action Replay — hoàn toàn offline, không cần tài khoản.",
+      "T-Emulator là trình giả lập các hệ máy game cổ điển của Nintendo trên Android: NES, SNES, Game Boy, Game Boy Color, Game Boy Advance (GBA) và nhiều hệ máy khác. Chọn ROM do bạn tự cung cấp từ máy và chơi ngay với phím cảm ứng tối ưu từng hệ máy, lưu game 10 slot, tua nhanh, cheat Game Genie/Action Replay — hoàn toàn offline, không cần tài khoản.",
     descriptionEn:
-      "T-Emulator is a multi-system emulator for classic games on Android: pick a ROM from your device and play instantly with touch controls optimized per system, 10 save slots, fast-forward, Game Genie/Action Replay cheats — fully offline, no account required.",
+      "T-Emulator is an emulator for classic Nintendo game systems on Android: NES, SNES, Game Boy, Game Boy Color, Game Boy Advance (GBA) and more. Pick a self-provided ROM from your device and play instantly with touch controls optimized per system, 10 save slots, fast-forward, Game Genie/Action Replay cheats — fully offline, no account required.",
     features: [
-      "Hỗ trợ nhiều hệ máy game cổ điển",
+      "Hỗ trợ NES, SNES, Game Boy, Game Boy Color, GBA và nhiều hệ máy khác",
       "Chọn và chạy ROM trực tiếp từ thiết bị",
       "Phím cảm ứng với layout riêng cho từng hệ máy",
       "Lưu/tải game 10 slot + Quick Save/Quick Load",
@@ -142,7 +142,7 @@ export const apps: AppInfo[] = [
       "Chạy hoàn toàn offline, không cần tài khoản",
     ],
     featuresEn: [
-      "Support for multiple classic game systems",
+      "Support for NES, SNES, Game Boy, Game Boy Color, GBA and more classic systems",
       "Pick and run ROMs directly from your device",
       "Touch controls with per-system layouts",
       "10 save slots + Quick Save/Quick Load",
