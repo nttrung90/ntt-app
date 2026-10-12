@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "NTT Apps",
-  tagline: "Ứng dụng Việt cho người Việt",
+  tagline: "Ứng dụng hữu ích cho mọi người",
   description:
     "Tuyển tập các ứng dụng Android của NTT trên Google Play: Lịch Việt, T-Scanner, T-Emulator.",
   // Đổi thành domain thật sau khi deploy (dùng cho sitemap + robots)
