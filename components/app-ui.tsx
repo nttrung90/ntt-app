@@ -29,6 +29,11 @@ export function AppIcon({ app, size = "md" }: { app: AppInfo; size?: "sm" | "md"
   );
 }
 
+const PLAY_BADGES: Record<Lang, string> = {
+  vi: "https://play.google.com/intl/en_us/badges/static/images/badges/vi_badge_web_generic.png",
+  en: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+};
+
 export function PlayButton({ app, compact = false, lang = "vi" }: { app: AppInfo; compact?: boolean; lang?: Lang }) {
   const t = strings(lang);
   if (!app.playStoreUrl) {
@@ -43,22 +48,20 @@ export function PlayButton({ app, compact = false, lang = "vi" }: { app: AppInfo
       </span>
     );
   }
+  // Badge "Tải trên Google Play" chính thức của Google
   return (
     <a
       href={app.playStoreUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-2 rounded-full bg-neutral-900 font-bold text-white transition hover:bg-neutral-700 ${
-        compact ? "px-4 py-2 text-xs" : "px-5 py-3 text-sm"
-      }`}
+      className="inline-block transition hover:scale-[1.03] hover:opacity-95"
     >
-      <svg viewBox="0 0 24 24" fill="currentColor" className={compact ? "h-4 w-4" : "h-5 w-5"} aria-hidden>
-        <path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.7 2.2l-.1.1z" />
-        <path d="M16.7 15.7 13 12l3.7-3.7 4.6 2.6c1.3.7 1.3 1.9 0 2.6l-4.6 2.2z" opacity=".9" />
-        <path d="M16.7 8.3 13 12 3.6 2.3c.4-.4 1-.4 1.7 0l11.4 6z" opacity=".75" />
-        <path d="M16.7 15.7l-11.4 6c-.7.4-1.3.4-1.7 0l9.4-9.4 3.7 3.4z" opacity=".75" />
-      </svg>
-      {t.play.download}
+      <img
+        src={PLAY_BADGES[lang]}
+        alt={t.play.download}
+        loading="lazy"
+        className={compact ? "h-10 w-auto" : "h-14 w-auto"}
+      />
     </a>
   );
 }
