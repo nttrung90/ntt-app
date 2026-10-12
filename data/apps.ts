@@ -31,9 +31,16 @@ export interface AppInfo {
   featuresEn: string[];
   /** Link Google Play; để trống nếu chưa phát hành -> hiển thị "Sắp ra mắt" */
   playStoreUrl: string;
-  /** Nhãn trạng thái riêng khi chưa có link (VD: "Đang thử nghiệm"); bỏ trống -> dùng "Sắp ra mắt" */
+  /** Nhãn trạng thái riêng khi chưa có link (VD: "Tham gia thử nghiệm"); bỏ trống -> dùng "Sắp ra mắt" */
   statusLabel?: string;
   statusLabelEn?: string;
+  /** Thông tin chương trình thử nghiệm: nút mở bảng hướng dẫn 3 bước (vào group -> nhận thử nghiệm -> cài đặt) */
+  testing?: {
+    groupEmail: string;
+    groupUrl: string;
+    optInUrl: string;
+    installUrl: string;
+  };
   /** Màu gradient cho icon placeholder, ví dụ "from-emerald-500 to-teal-700" */
   gradient: string;
   /** Tên file icon trong /public/icons/<slug>.png — để trống thì dùng chữ cái đầu */
@@ -195,8 +202,15 @@ export const apps: AppInfo[] = [
       "Fully offline, no account required",
     ],
     playStoreUrl: "",
-    statusLabel: "Đang thử nghiệm",
-    statusLabelEn: "In testing",
+    statusLabel: "Tham gia thử nghiệm",
+    statusLabelEn: "Join testing",
+    testing: {
+      groupEmail: "testappLV@googlegroups.com",
+      groupUrl: "https://groups.google.com/g/testappLV",
+      optInUrl: "https://play.google.com/apps/testing/com.ntt.clockchess",
+      installUrl:
+        "https://play.google.com/store/apps/details?id=com.ntt.clockchess",
+    },
     gradient: "from-red-500 to-orange-600",
     hasPrivacyPolicy: true,
   },

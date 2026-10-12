@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Clock, ShieldCheck } from "lucide-react";
 import type { AppInfo, Lang, LocalizedApp } from "@/data/apps";
 import { strings } from "@/data/i18n";
+import { TestingButton } from "./testing-button";
 
 export function AppIcon({ app, size = "md" }: { app: AppInfo; size?: "sm" | "md" | "lg" }) {
   const dims =
@@ -38,6 +39,9 @@ const PLAY_BADGES: Record<Lang, string> = {
 export function PlayButton({ app, compact = false, lang = "vi" }: { app: AppInfo; compact?: boolean; lang?: Lang }) {
   const t = strings(lang);
   if (!app.playStoreUrl) {
+    if (app.testing) {
+      return <TestingButton app={app} compact={compact} lang={lang} />;
+    }
     const label =
       lang === "en" ? app.statusLabelEn || t.play.soon : app.statusLabel || t.play.soon;
     return (
