@@ -1,6 +1,5 @@
 import Link from "next/link";
-import type { Lang } from "@/data/apps";
-import { siteConfig } from "@/data/apps";
+import { siteConfig, siteTagline, type Lang } from "@/data/apps";
 import { strings } from "@/data/i18n";
 import { LangSwitch } from "./lang";
 
@@ -51,9 +50,7 @@ export function SiteFooter({ lang }: { lang: Lang }) {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-base font-extrabold">{siteConfig.name}</p>
-            <p className="mt-1 max-w-sm text-sm text-neutral-500">
-              {lang === "en" ? siteConfig.descriptionEn : siteConfig.description}
-            </p>
+            <p className="mt-1 text-sm text-neutral-500">{siteTagline(lang)}</p>
           </div>
           <div className="text-sm">
             <p className="font-semibold text-neutral-700">{t.footer.contact}</p>

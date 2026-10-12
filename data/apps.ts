@@ -10,10 +10,6 @@ export const siteConfig = {
   name: "NTT Apps",
   tagline: "Ứng dụng hữu ích cho mọi người",
   taglineEn: "Useful apps for everyone",
-  description:
-    "Tuyển tập các ứng dụng Android của NTT trên Google Play: Lịch Việt, T-Scanner, T-Emulator.",
-  descriptionEn:
-    "A collection of NTT's Android apps on Google Play: Lịch Việt, T-Scanner, T-Emulator.",
   // Đổi thành domain thật sau khi deploy (dùng cho sitemap + robots)
   url: "https://ntt-app.vercel.app",
   email: "firstntt90@gmail.com",
@@ -21,10 +17,6 @@ export const siteConfig = {
 
 export function siteTagline(lang: Lang): string {
   return lang === "en" ? siteConfig.taglineEn : siteConfig.tagline;
-}
-
-export function siteDescription(lang: Lang): string {
-  return lang === "en" ? siteConfig.descriptionEn : siteConfig.description;
 }
 
 export interface AppInfo {

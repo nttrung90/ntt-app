@@ -47,14 +47,18 @@ export default async function AppDetailPage({
         <ArrowLeft size={15} /> {t.detail.back}
       </Link>
 
-      <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-center">
-        <AppIcon app={app} size="lg" />
-        <div>
-          <h1 className="text-3xl font-black tracking-tight">{l.name}</h1>
-          <p className="mt-1 font-medium text-indigo-600">{l.lTagline}</p>
-          {l.packageName && (
-            <p className="mt-1 font-mono text-xs text-neutral-400">{l.packageName}</p>
-          )}
+      <div className={`relative mt-6 overflow-hidden rounded-3xl border border-black/5 bg-gradient-to-br ${app.gradient} p-[1px]`}>
+        <div className="rounded-[calc(1.5rem-1px)] bg-white/95 p-6 backdrop-blur sm:p-8">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <AppIcon app={app} size="lg" />
+            <div>
+              <h1 className="text-3xl font-black tracking-tight">{l.name}</h1>
+              <p className="mt-1.5 font-medium text-indigo-600">{l.lTagline}</p>
+              {l.packageName && (
+                <p className="mt-1.5 inline-block rounded-md bg-neutral-100 px-2 py-0.5 font-mono text-xs text-neutral-500">{l.packageName}</p>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 

@@ -66,31 +66,36 @@ export function PlayButton({ app, compact = false, lang = "vi" }: { app: AppInfo
 export function AppCard({ app }: { app: LocalizedApp }) {
   const t = strings(app.lang);
   return (
-    <article className="flex flex-col rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-      <div className="flex items-start gap-4">
-        <AppIcon app={app} />
-        <div className="min-w-0">
-          <h3 className="text-xl font-extrabold tracking-tight">{app.name}</h3>
-          <p className="mt-0.5 text-sm font-medium text-indigo-600">{app.lTagline}</p>
+    <article className="group flex flex-col overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <div className={`h-1 bg-gradient-to-r ${app.gradient}`} aria-hidden />
+      <div className="flex flex-1 flex-col p-6">
+        <div className="flex items-start gap-4">
+          <span className="rounded-2xl ring-4 ring-neutral-100">
+            <AppIcon app={app} />
+          </span>
+          <div className="min-w-0 pt-1">
+            <h3 className="text-xl font-extrabold tracking-tight">{app.name}</h3>
+            <p className="mt-1 text-sm font-medium leading-snug text-indigo-600">{app.lTagline}</p>
+          </div>
         </div>
-      </div>
-      <p className="mt-4 flex-1 text-sm leading-relaxed text-neutral-600">
-        {app.lDescription}
-      </p>
-      <div className="mt-5 flex flex-wrap items-center gap-3">
-        <PlayButton app={app} compact lang={app.lang} />
-        <Link
-          href={`/${app.lang}/apps/${app.slug}`}
-          className="inline-flex items-center gap-1 text-sm font-bold text-neutral-700 hover:text-indigo-600"
-        >
-          {t.card.details} <ArrowRight size={15} />
-        </Link>
-        <Link
-          href={`/${app.lang}/privacy/${app.slug}`}
-          className="inline-flex items-center gap-1 text-sm font-medium text-neutral-400 hover:text-neutral-600"
-        >
-          <ShieldCheck size={15} /> {t.card.privacy}
-        </Link>
+        <p className="mt-4 flex-1 text-sm leading-relaxed text-neutral-600">
+          {app.lDescription}
+        </p>
+        <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-black/5 pt-5">
+          <PlayButton app={app} compact lang={app.lang} />
+          <Link
+            href={`/${app.lang}/apps/${app.slug}`}
+            className="inline-flex items-center gap-1 text-sm font-bold text-neutral-700 transition group-hover:gap-1.5 hover:text-indigo-600"
+          >
+            {t.card.details} <ArrowRight size={15} />
+          </Link>
+          <Link
+            href={`/${app.lang}/privacy/${app.slug}`}
+            className="inline-flex items-center gap-1 text-sm font-medium text-neutral-400 hover:text-neutral-600"
+          >
+            <ShieldCheck size={15} /> {t.card.privacy}
+          </Link>
+        </div>
       </div>
     </article>
   );
