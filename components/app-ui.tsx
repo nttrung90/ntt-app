@@ -6,10 +6,11 @@ import { strings } from "@/data/i18n";
 export function AppIcon({ app, size = "md" }: { app: AppInfo; size?: "sm" | "md" | "lg" }) {
   const dims =
     size === "lg" ? "h-24 w-24 rounded-3xl" : size === "sm" ? "h-12 w-12 rounded-2xl" : "h-16 w-16 rounded-2xl";
-  if (app.iconUrl) {
+  const src = app.iconUrl || (app.iconFile ? `/icons/${app.iconFile}` : null);
+  if (src) {
     return (
       <img
-        src={app.iconUrl}
+        src={src}
         alt={`Icon ${app.name}`}
         width={size === "lg" ? 96 : size === "sm" ? 48 : 64}
         height={size === "lg" ? 96 : size === "sm" ? 48 : 64}
@@ -37,6 +38,8 @@ const PLAY_BADGES: Record<Lang, string> = {
 export function PlayButton({ app, compact = false, lang = "vi" }: { app: AppInfo; compact?: boolean; lang?: Lang }) {
   const t = strings(lang);
   if (!app.playStoreUrl) {
+    const label =
+      lang === "en" ? app.statusLabelEn || t.play.soon : app.statusLabel || t.play.soon;
     return (
       <span
         className={`inline-flex items-center gap-1.5 rounded-full bg-neutral-100 font-semibold text-neutral-500 ${
@@ -44,7 +47,7 @@ export function PlayButton({ app, compact = false, lang = "vi" }: { app: AppInfo
         }`}
       >
         <Clock size={compact ? 14 : 16} />
-        {t.play.soon}
+        {label}
       </span>
     );
   }

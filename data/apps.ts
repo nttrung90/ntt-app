@@ -31,6 +31,9 @@ export interface AppInfo {
   featuresEn: string[];
   /** Link Google Play; để trống nếu chưa phát hành -> hiển thị "Sắp ra mắt" */
   playStoreUrl: string;
+  /** Nhãn trạng thái riêng khi chưa có link (VD: "Đang thử nghiệm"); bỏ trống -> dùng "Sắp ra mắt" */
+  statusLabel?: string;
+  statusLabelEn?: string;
   /** Màu gradient cho icon placeholder, ví dụ "from-emerald-500 to-teal-700" */
   gradient: string;
   /** Tên file icon trong /public/icons/<slug>.png — để trống thì dùng chữ cái đầu */
@@ -156,6 +159,45 @@ export const apps: AppInfo[] = [
     playStoreUrl:
       "https://play.google.com/store/apps/details?id=com.temulator.app",
     gradient: "from-violet-500 to-purple-800",
+    hasPrivacyPolicy: true,
+  },
+  {
+    slug: "clock-chess",
+    iconFile: "clock-chess.svg",
+    name: "Clock Chess",
+    packageName: "com.ntt.clockchess",
+    tagline: "Đồng hồ bấm giờ cho cờ vua, cờ tướng, cờ vây, cờ caro",
+    taglineEn: "Chess clock for chess, xiangqi, go and gomoku",
+    description:
+      "Clock Chess là ứng dụng đồng hồ bấm giờ cho 2 người chơi các môn cờ: cờ vua, cờ tướng, cờ vây, cờ caro. Hỗ trợ 6 chế độ tính giờ (Sudden Death, Fischer, Bronstein, Hourglass, Byo-yomi...), 14 preset có sẵn cho từng môn cờ, tự tạo preset riêng, chạy chính xác ngay cả khi khóa màn hình — hoàn toàn offline, không cần tài khoản.",
+    descriptionEn:
+      "Clock Chess is a 2-player chess clock for board games: chess, xiangqi, go and gomoku. It supports 6 time controls (Sudden Death, Fischer, Bronstein, Hourglass, Byo-yomi and more), 14 built-in presets per game, custom presets, and accurate timing even with the screen locked — fully offline, no account required.",
+    features: [
+      "6 chế độ tính giờ: Sudden Death, Fischer, Bronstein, Hourglass, Byo-yomi...",
+      "14 preset có sẵn cho cờ vua, cờ tướng, cờ vây",
+      "Tự tạo, sửa, xóa preset thời gian riêng",
+      "Chạy chính xác khi khóa màn hình (foreground service)",
+      "Âm thanh + rung khi chuyển lượt và hết giờ",
+      "Tự tạm dừng khi có cuộc gọi đến",
+      "Giữ màn hình luôn sáng trong ván đấu",
+      "Giao diện tiếng Việt và tiếng Anh",
+      "Hoàn toàn offline, không cần tài khoản",
+    ],
+    featuresEn: [
+      "6 time controls: Sudden Death, Fischer, Bronstein, Hourglass, Byo-yomi and more",
+      "14 built-in presets for chess, xiangqi and go",
+      "Create, edit and delete your own custom presets",
+      "Accurate timing with screen locked (foreground service)",
+      "Sound + vibration on move switch and time-up",
+      "Auto-pause on incoming calls",
+      "Keep screen on during games",
+      "Vietnamese and English interface",
+      "Fully offline, no account required",
+    ],
+    playStoreUrl: "",
+    statusLabel: "Đang thử nghiệm",
+    statusLabelEn: "In testing",
+    gradient: "from-red-500 to-orange-600",
     hasPrivacyPolicy: true,
   },
 ];
