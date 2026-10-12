@@ -34,18 +34,24 @@ export function LangRedirect() {
 
     let cancelled = false;
     (async () => {
-      let lang: Lang = "en";
+      // Mặc định: tiếng Việt.
+      // Chỉ hiển thị tiếng Anh khi THỎA MÃN CẢ 2 điều kiện:
+      //   1. vị trí ở nước ngoài (không phải VN), VÀ
+      //   2. ngôn ngữ trình duyệt khác tiếng Việt.
+      // Thiếu 1 trong 2 -> tiếng Việt.
+      let lang: Lang = "vi";
       try {
         const ctrl = new AbortController();
         const timer = setTimeout(() => ctrl.abort(), 2500);
         const res = await fetch("https://ipapi.co/country/", { signal: ctrl.signal });
         clearTimeout(timer);
         const cc = (await res.text()).trim().toUpperCase();
-        lang = cc === "VN" ? "vi" : "en";
+        const nav = (navigator.language || "").toLowerCase();
+        const abroad = cc !== "" && cc !== "VN";
+        const nonVietnamese = nav !== "" && !nav.startsWith("vi");
+        if (abroad && nonVietnamese) lang = "en";
       } catch {
-        // Fallback: theo ngôn ngữ trình duyệt
-        const nav = (navigator.language || "en").toLowerCase();
-        lang = nav.startsWith("vi") ? "vi" : "en";
+        lang = "vi"; // không xác định được vị trí -> mặc định tiếng Việt
       }
       if (!cancelled) router.replace(`/${lang}`);
     })();
