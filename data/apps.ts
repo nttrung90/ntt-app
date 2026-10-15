@@ -214,6 +214,41 @@ export const apps: AppInfo[] = [
     gradient: "from-red-500 to-orange-600",
     hasPrivacyPolicy: true,
   },
+  {
+    slug: "12-cross-testers",
+    iconFile: "12-cross-testers.svg",
+    name: "12 Cross Testers",
+    packageName: "com.ntt.crosstest",
+    tagline: "Cộng đồng kiểm thử chéo giúp vượt qua yêu cầu 20 tester / 14 ngày của Google Play",
+    taglineEn: "Cross-testing community to pass Google Play's 20-tester / 14-day requirement",
+    description:
+      "12 Cross Testers là nền tảng cộng đồng giúp các nhà phát triển Android kiểm thử chéo ứng dụng để đáp ứng yêu cầu closed testing 14 ngày với 20 tester của Google Play. Đăng chiến dịch kiểm thử cho app của bạn, tham gia kiểm thử app của người khác, check-in hàng ngày, tích điểm Credit và theo dõi tiến độ 14 ngày của từng tester.",
+    descriptionEn:
+      "12 Cross Testers is a community platform that helps Android developers cross-test their apps to meet Google Play's 14-day closed testing requirement with 20 testers. Publish a testing campaign for your app, join testing for others, check in daily, earn Credit points, and track each tester's 14-day progress.",
+    features: [
+      "Đăng chiến dịch kiểm thử cho ứng dụng của bạn",
+      "Tham gia kiểm thử ứng dụng của cộng đồng",
+      "Check-in hàng ngày, theo dõi tiến độ 14 ngày của từng tester",
+      "Hệ thống điểm Credit thưởng cho tester tích cực",
+      "Bảng xếp hạng tester",
+      "Đăng nhập nhanh bằng tài khoản Google",
+      "Góp ý và đánh giá 1–5 sao cho từng ứng dụng",
+      "Nhắc nhở check-in hàng ngày lúc 20:00",
+    ],
+    featuresEn: [
+      "Publish testing campaigns for your apps",
+      "Join testing for community apps",
+      "Daily check-ins with per-tester 14-day progress tracking",
+      "Credit point system rewarding active testers",
+      "Tester leaderboard",
+      "Fast sign-in with Google account",
+      "Feedback and 1–5 star ratings for each app",
+      "Daily check-in reminder at 20:00",
+    ],
+    playStoreUrl: "",
+    gradient: "from-blue-600 to-indigo-900",
+    hasPrivacyPolicy: true,
+  },
 ];
 
 export function getApp(slug: string): AppInfo | undefined {
