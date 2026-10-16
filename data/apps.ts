@@ -11,7 +11,7 @@ export const siteConfig = {
   tagline: "Ứng dụng hữu ích cho mọi người",
   taglineEn: "Useful apps for everyone",
   // Domain thật sau khi deploy (dùng cho sitemap + robots)
-  url: "https://nttapp.vercel.app",
+  url: "https://app.netvn.net",
   email: "firstntt90@gmail.com",
 };
 
