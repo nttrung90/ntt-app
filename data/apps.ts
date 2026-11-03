@@ -11,7 +11,7 @@ export const siteConfig = {
   tagline: "Ứng dụng hữu ích cho mọi người",
   taglineEn: "Useful apps for everyone",
   // Domain thật sau khi deploy (dùng cho sitemap + robots)
-  url: "https://app.netvn.net",
+  url: "https://nttapp.vercel.app",
   email: "firstntt90@gmail.com",
 };
 
@@ -201,16 +201,8 @@ export const apps: AppInfo[] = [
       "Vietnamese and English interface",
       "Fully offline, no account required",
     ],
-    playStoreUrl: "",
-    statusLabel: "Tham gia thử nghiệm",
-    statusLabelEn: "Join testing",
-    testing: {
-      groupEmail: "testappLV@googlegroups.com",
-      groupUrl: "https://groups.google.com/g/testappLV",
-      optInUrl: "https://play.google.com/apps/testing/com.ntt.clockchess",
-      installUrl:
-        "https://play.google.com/store/apps/details?id=com.ntt.clockchess",
-    },
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.ntt.clockchess",
     gradient: "from-red-500 to-orange-600",
     hasPrivacyPolicy: true,
   },
@@ -245,7 +237,8 @@ export const apps: AppInfo[] = [
       "Feedback and 1–5 star ratings for each app",
       "Daily check-in reminder at 20:00",
     ],
-    playStoreUrl: "",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.ntt.crosstest",
     gradient: "from-blue-600 to-indigo-900",
     hasPrivacyPolicy: true,
   },
