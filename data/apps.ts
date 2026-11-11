@@ -242,6 +242,41 @@ export const apps: AppInfo[] = [
     gradient: "from-blue-600 to-indigo-900",
     hasPrivacyPolicy: true,
   },
+  {
+    slug: "t-note",
+    iconFile: "t-note.svg",
+    name: "T-Note",
+    packageName: "com.ntt.notentt",
+    tagline: "Ứng dụng ghi chú ưu tiên ngoại tuyến, đồng bộ đa thiết bị",
+    taglineEn: "Offline-first notes app with multi-device sync",
+    description:
+      "T-Note là ứng dụng ghi chú đa nền tảng (Android, iOS, Windows) hoạt động theo kiến trúc ưu tiên ngoại tuyến: ghi chú được lưu ngay trên thiết bị, đồng bộ qua Firebase khi bạn đăng nhập và sao lưu vào Google Drive cá nhân của bạn. Hỗ trợ checklist việc cần làm, gắn nhãn, ghim và tìm kiếm ghi chú — không quảng cáo, không theo dõi.",
+    descriptionEn:
+      "T-Note is a cross-platform notes app (Android, iOS, Windows) built offline-first: your notes are stored on your device, synced via Firebase when you sign in, and backed up to your own Google Drive. It supports checklists, tags, pinning and fast search — no ads, no tracking.",
+    features: [
+      "Ghi chú + checklist việc cần làm",
+      "Hoạt động hoàn toàn ngoại tuyến, không cần tài khoản",
+      "Đồng bộ ghi chú qua Firebase khi đăng nhập",
+      "Sao lưu vào thư mục riêng trên Google Drive của bạn",
+      "Gắn nhãn, ghim, lưu trữ và thùng rác",
+      "Tìm kiếm ghi chú nhanh",
+      "Giao diện Sáng / Tối / theo hệ thống",
+      "Không quảng cáo, không SDK theo dõi",
+    ],
+    featuresEn: [
+      "Notes + to-do checklists",
+      "Works fully offline, no account required",
+      "Sync notes via Firebase when signed in",
+      "Back up to a private folder in your own Google Drive",
+      "Tags, pin, archive and trash",
+      "Fast note search",
+      "Light / Dark / system theme",
+      "No ads, no tracking SDKs",
+    ],
+    playStoreUrl: "",
+    gradient: "from-sky-400 to-blue-600",
+    hasPrivacyPolicy: true,
+  },
 ];
 
 export function getApp(slug: string): AppInfo | undefined {

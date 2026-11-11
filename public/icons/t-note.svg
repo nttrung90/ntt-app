@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect x="16" y="16" width="480" height="480" rx="112" fill="#29B6F6"/>
+<rect x="140" y="86" width="250" height="340" rx="16" fill="#FFA726" stroke="#173A5E" stroke-width="7"/>
+<polygon points="240,86 390,86 390,240 300,86" fill="#FFFFFF" opacity="0.14"/>
+<rect x="152" y="396" width="226" height="18" rx="9" fill="#FFFFFF" opacity="0.85"/>
+<rect x="168" y="168" width="196" height="64" fill="#FFF8E1"/>
+<text x="266" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="800" fill="#1565C0">T-Note</text>
+<rect x="185" y="256" width="70" height="9" rx="4.5" fill="#F57C00"/>
+<rect x="185" y="276" width="50" height="9" rx="4.5" fill="#F57C00"/>
+<g stroke="#FFFFFF" stroke-width="6" stroke-linecap="round">
+<line x1="298" y1="352" x2="343" y2="340"/>
+<line x1="303" y1="370" x2="348" y2="358"/>
+<line x1="326" y1="386" x2="356" y2="377"/>
+</g>
+<circle cx="140" cy="122" r="13" fill="#FFFFFF" stroke="#173A5E" stroke-width="5"/>
+<circle cx="140" cy="168" r="13" fill="#FFFFFF" stroke="#173A5E" stroke-width="5"/>
+<circle cx="140" cy="214" r="13" fill="#FFFFFF" stroke="#173A5E" stroke-width="5"/>
+<circle cx="140" cy="260" r="13" fill="#FFFFFF" stroke="#173A5E" stroke-width="5"/>
+<circle cx="140" cy="306" r="13" fill="#FFFFFF" stroke="#173A5E" stroke-width="5"/>
+<circle cx="140" cy="352" r="13" fill="#FFFFFF" stroke="#173A5E" stroke-width="5"/>
+<g transform="translate(302,288) rotate(-38)"><g stroke="#173A5E" stroke-width="5" stroke-linejoin="round"><polygon points="-17,55 17,55 0,102" fill="#FFB300"/><rect x="-17" y="-45" width="34" height="100" fill="#2196F3"/><rect x="-17" y="-95" width="34" height="50" fill="#FFA726"/><rect x="-8" y="-110" width="16" height="15" rx="5" fill="#FFA726"/><rect x="17" y="-82" width="9" height="55" rx="4" fill="#FFA726"/></g></g>
+</svg>
