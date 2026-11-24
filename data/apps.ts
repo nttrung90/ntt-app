@@ -277,6 +277,41 @@ export const apps: AppInfo[] = [
     gradient: "from-sky-400 to-blue-600",
     hasPrivacyPolicy: true,
   },
+  {
+    slug: "t-ebook",
+    iconFile: "t-ebook.svg",
+    name: "T-Ebook",
+    packageName: "com.ntt.tebook",
+    tagline: "Ứng dụng đọc sách đa định dạng, ưu tiên cục bộ, không quảng cáo",
+    taglineEn: "Multi-format ebook reader, local-first, no ads",
+    description:
+      "T-Ebook là ứng dụng đọc sách đa nền tảng (Android, Desktop, Web) theo triết lý ưu tiên cục bộ: sách, ghi chú, highlight và tiến trình đọc được lưu ngay trên thiết bị, không cần tài khoản. Hỗ trợ nhiều định dạng EPUB, PDF, MOBI, AZW3, TXT...; đồng bộ qua dịch vụ đám mây cá nhân (Google Drive, OneDrive, WebDAV...) khi bạn chủ động bật; kèm dịch thuật, tra từ điển, đọc TTS và trợ lý AI tùy chọn.",
+    descriptionEn:
+      "T-Ebook is a cross-platform ebook reader (Android, Desktop, Web) built local-first: your books, notes, highlights and reading progress are stored right on your device, no account required. It supports many formats — EPUB, PDF, MOBI, AZW3, TXT and more — syncs via your personal cloud storage (Google Drive, OneDrive, WebDAV...) when you choose to enable it, and offers translation, dictionary lookup, TTS and optional AI assistance.",
+    features: [
+      "Đọc nhiều định dạng: EPUB, PDF, MOBI, AZW3, TXT...",
+      "Đọc offline hoàn toàn, không cần tài khoản",
+      "Ghi chú, highlight, bookmark và thống kê đọc",
+      "Đồng bộ qua Google Drive, OneDrive, WebDAV...",
+      "Dịch thuật, tra từ điển, đọc TTS, OCR",
+      "Tùy chỉnh font chữ, cỡ chữ, theme giao diện",
+      "Xuất ghi chú sang Notion, Obsidian, Anki...",
+      "Không quảng cáo, không theo dõi",
+    ],
+    featuresEn: [
+      "Read many formats: EPUB, PDF, MOBI, AZW3, TXT and more",
+      "Fully offline reading, no account required",
+      "Notes, highlights, bookmarks and reading stats",
+      "Sync via Google Drive, OneDrive, WebDAV and more",
+      "Translation, dictionary lookup, TTS, OCR",
+      "Customizable fonts, text size and themes",
+      "Export notes to Notion, Obsidian, Anki and more",
+      "No ads, no tracking",
+    ],
+    playStoreUrl: "",
+    gradient: "from-orange-500 to-amber-500",
+    hasPrivacyPolicy: true,
+  },
 ];
 
 export function getApp(slug: string): AppInfo | undefined {

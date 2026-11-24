@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect x="16" y="16" width="480" height="480" rx="112" fill="#1D3557"/>
+<path d="M106,168 Q177,146 250,172 L250,344 Q177,318 106,334 Z" fill="#5B8DB8"/>
+<path d="M262,172 Q335,146 406,168 L406,334 Q335,318 262,344 Z" fill="#5B8DB8"/>
+<path d="M118,158 Q183,138 250,162 L250,332 Q183,308 118,322 Z" fill="#F4F8FB" stroke="#12263A" stroke-width="6" stroke-linejoin="round"/>
+<path d="M262,162 Q329,138 394,158 L394,322 Q329,308 262,332 Z" fill="#F4F8FB" stroke="#12263A" stroke-width="6" stroke-linejoin="round"/>
+<g stroke="#9DB8CC" stroke-width="7" stroke-linecap="round">
+<line x1="140" y1="208" x2="226" y2="220"/>
+<line x1="140" y1="242" x2="226" y2="253"/>
+<line x1="140" y1="276" x2="208" y2="285"/>
+<line x1="286" y1="220" x2="344" y2="210"/>
+<line x1="286" y1="253" x2="344" y2="244"/>
+</g>
+<path d="M188,126 L324,126 L324,168 L279,168 L279,328 L256,352 L233,328 L233,168 L188,168 Z" fill="#F5820B" stroke="#12263A" stroke-width="6" stroke-linejoin="round"/>
+<rect x="356" y="182" width="94" height="33" rx="8" fill="#43A047" stroke="#12263A" stroke-width="4"/>
+<text x="403" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800" fill="#FFFFFF">.EPUB</text>
+<rect x="356" y="224" width="94" height="33" rx="8" fill="#E53935" stroke="#12263A" stroke-width="4"/>
+<text x="403" y="247" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800" fill="#FFFFFF">.PDF</text>
+<rect x="356" y="266" width="94" height="33" rx="8" fill="#FFB300" stroke="#12263A" stroke-width="4"/>
+<text x="403" y="289" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800" fill="#FFFFFF">.MOBI</text>
+<rect x="356" y="308" width="94" height="33" rx="8" fill="#1E88E5" stroke="#12263A" stroke-width="4"/>
+<text x="403" y="331" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="800" fill="#FFFFFF">.TXT</text>
+<text x="256" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="800" letter-spacing="1" fill="#FFFFFF">T-Ebook</text>
+</svg>
