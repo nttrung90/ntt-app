@@ -312,6 +312,43 @@ export const apps: AppInfo[] = [
     gradient: "from-orange-500 to-amber-500",
     hasPrivacyPolicy: true,
   },
+  {
+    slug: "t-battery",
+    iconFile: "t-battery.svg",
+    name: "T-Battery",
+    packageName: "com.ntt.tbattery",
+    tagline: "Theo dõi pin chi tiết: lịch sử sạc/xả, biểu đồ, cảnh báo — 100% trên thiết bị",
+    taglineEn: "Detailed battery tracking: charge history, charts and alarms — 100% on-device",
+    description:
+      "T-Battery là ứng dụng theo dõi pin chuyên sâu cho Android: xem trực tiếp mức pin, nhiệt độ, điện áp, dòng điện và công suất; ghi lại lịch sử sạc/xả thành biểu đồ theo thời gian; ước tính thời gian sạc đầy hoặc thời gian sử dụng còn lại và cảnh báo pin theo ngưỡng bạn thiết lập. Mọi dữ liệu được xử lý và lưu ngay trên thiết bị — không Internet, không quảng cáo, không theo dõi.",
+    descriptionEn:
+      "T-Battery is an in-depth battery monitoring app for Android: view live battery level, temperature, voltage, current and power; record charge/discharge history as charts over time; estimate time to full charge or remaining usage time, and get battery alarms at thresholds you set. All data is processed and stored right on your device — no Internet, no ads, no tracking.",
+    features: [
+      "Xem trực tiếp mức pin, nhiệt độ, điện áp, dòng điện, công suất",
+      "Lịch sử sạc/xả dạng biểu đồ theo thời gian",
+      "Ước tính thời gian sạc đầy và thời gian sử dụng còn lại",
+      "Cảnh báo pin theo ngưỡng: đầy pin, quá nhiệt, mức pin",
+      "Thông báo thường trực, widget và Live Updates (Android 16+)",
+      "Xuất lịch sử CSV/JSON, sao lưu và khôi phục dữ liệu",
+      "Thông số nâng cao qua Root/Shizuku (tùy chọn)",
+      "100% trên thiết bị — không Internet, không quảng cáo, không theo dõi",
+    ],
+    featuresEn: [
+      "Live battery level, temperature, voltage, current and power",
+      "Charge/discharge history as charts over time",
+      "Estimates for time to full charge and remaining usage time",
+      "Threshold battery alarms: full charge, overheating, battery level",
+      "Persistent notification, widgets and Live Updates (Android 16+)",
+      "CSV/JSON history export, backup and restore",
+      "Advanced readings via Root/Shizuku (optional)",
+      "100% on-device — no Internet, no ads, no tracking",
+    ],
+    playStoreUrl: "",
+    statusLabel: "Đang thử nghiệm",
+    statusLabelEn: "In testing",
+    gradient: "from-emerald-500 to-green-700",
+    hasPrivacyPolicy: true,
+  },
 ];
 
 export function getApp(slug: string): AppInfo | undefined {
